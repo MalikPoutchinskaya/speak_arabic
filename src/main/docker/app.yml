@@ -1,0 +1,8 @@
+version: '2'
+services:
+  speak_arabic-app:
+    build: ../../..
+    container_name: speak_arabic-app
+    environment:
+    ports:
+      - 8081:8081:

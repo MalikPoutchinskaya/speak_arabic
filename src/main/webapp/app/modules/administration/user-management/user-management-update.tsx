@@ -68,20 +68,20 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   validate={{
                     required: {
                       value: true,
-                      errorMessage: 'Your username is required.',
+                      errorMessage: 'Your username is required.'
                     },
                     pattern: {
                       value: '^[_.@A-Za-z0-9-]*$',
-                      errorMessage: 'Your username can only contain letters and digits.',
+                      errorMessage: 'Your username can only contain letters and digits.'
                     },
                     minLength: {
                       value: 1,
-                      errorMessage: 'Your username is required to be at least 1 character.',
+                      errorMessage: 'Your username is required to be at least 1 character.'
                     },
                     maxLength: {
                       value: 50,
-                      errorMessage: 'Your username cannot be longer than 50 characters.',
-                    },
+                      errorMessage: 'Your username cannot be longer than 50 characters.'
+                    }
                   }}
                   value={user.login}
                 />
@@ -95,8 +95,8 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   validate={{
                     maxLength: {
                       value: 50,
-                      errorMessage: 'This field cannot be longer than 50 characters.',
-                    },
+                      errorMessage: 'This field cannot be longer than 50 characters.'
+                    }
                   }}
                   value={user.firstName}
                 />
@@ -110,8 +110,8 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   validate={{
                     maxLength: {
                       value: 50,
-                      errorMessage: 'This field cannot be longer than 50 characters.',
-                    },
+                      errorMessage: 'This field cannot be longer than 50 characters.'
+                    }
                   }}
                   value={user.lastName}
                 />
@@ -126,19 +126,19 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   validate={{
                     required: {
                       value: true,
-                      errorMessage: 'Your email is required.',
+                      errorMessage: 'Your email is required.'
                     },
                     email: {
-                      errorMessage: 'Your email is invalid.',
+                      errorMessage: 'Your email is invalid.'
                     },
                     minLength: {
                       value: 5,
-                      errorMessage: 'Your email is required to be at least 5 characters.',
+                      errorMessage: 'Your email is required to be at least 5 characters.'
                     },
                     maxLength: {
                       value: 254,
-                      errorMessage: 'Your email cannot be longer than 50 characters.',
-                    },
+                      errorMessage: 'Your email cannot be longer than 50 characters.'
+                    }
                   }}
                   value={user.email}
                 />
@@ -180,7 +180,7 @@ const mapStateToProps = (storeState: IRootState) => ({
   user: storeState.userManagement.user,
   roles: storeState.userManagement.authorities,
   loading: storeState.userManagement.loading,
-  updating: storeState.userManagement.updating,
+  updating: storeState.userManagement.updating
 });
 
 const mapDispatchToProps = { getUser, getRoles, updateUser, createUser, reset };

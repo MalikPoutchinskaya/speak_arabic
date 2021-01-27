@@ -53,7 +53,7 @@ export const AuditsPage = (props: IAuditsPageProps) => {
     setPagination({
       ...pagination,
       order: pagination.order === 'asc' ? 'desc' : 'asc',
-      sort: p,
+      sort: p
     });
 
   const transition = () => {
@@ -63,7 +63,7 @@ export const AuditsPage = (props: IAuditsPageProps) => {
   const handlePagination = currentPage =>
     setPagination({
       ...pagination,
-      activePage: currentPage,
+      activePage: currentPage
     });
 
   const getAllAudits = () => {
@@ -135,7 +135,7 @@ export const AuditsPage = (props: IAuditsPageProps) => {
 
 const mapStateToProps = (storeState: IRootState) => ({
   audits: storeState.administration.audits,
-  totalItems: storeState.administration.totalItems,
+  totalItems: storeState.administration.totalItems
 });
 
 const mapDispatchToProps = { getAudits };

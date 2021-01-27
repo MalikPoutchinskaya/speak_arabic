@@ -40,7 +40,7 @@ export const RegisterPage = (props: IRegisterProps) => {
                 required: { value: true, errorMessage: 'Your username is required.' },
                 pattern: { value: '^[_.@A-Za-z0-9-]*$', errorMessage: 'Your username can only contain letters and digits.' },
                 minLength: { value: 1, errorMessage: 'Your username is required to be at least 1 character.' },
-                maxLength: { value: 50, errorMessage: 'Your username cannot be longer than 50 characters.' },
+                maxLength: { value: 50, errorMessage: 'Your username cannot be longer than 50 characters.' }
               }}
             />
             <AvField
@@ -51,7 +51,7 @@ export const RegisterPage = (props: IRegisterProps) => {
               validate={{
                 required: { value: true, errorMessage: 'Your email is required.' },
                 minLength: { value: 5, errorMessage: 'Your email is required to be at least 5 characters.' },
-                maxLength: { value: 254, errorMessage: 'Your email cannot be longer than 50 characters.' },
+                maxLength: { value: 254, errorMessage: 'Your email cannot be longer than 50 characters.' }
               }}
             />
             <AvField
@@ -63,7 +63,7 @@ export const RegisterPage = (props: IRegisterProps) => {
               validate={{
                 required: { value: true, errorMessage: 'Your password is required.' },
                 minLength: { value: 4, errorMessage: 'Your password is required to be at least 4 characters.' },
-                maxLength: { value: 50, errorMessage: 'Your password cannot be longer than 50 characters.' },
+                maxLength: { value: 50, errorMessage: 'Your password cannot be longer than 50 characters.' }
               }}
             />
             <PasswordStrengthBar password={password} />
@@ -76,7 +76,7 @@ export const RegisterPage = (props: IRegisterProps) => {
                 required: { value: true, errorMessage: 'Your confirmation password is required.' },
                 minLength: { value: 4, errorMessage: 'Your confirmation password is required to be at least 4 characters.' },
                 maxLength: { value: 50, errorMessage: 'Your confirmation password cannot be longer than 50 characters.' },
-                match: { value: 'firstPassword', errorMessage: 'The password and its confirmation do not match!' },
+                match: { value: 'firstPassword', errorMessage: 'The password and its confirmation do not match!' }
               }}
             />
             <Button id="register-submit" color="primary" type="submit">

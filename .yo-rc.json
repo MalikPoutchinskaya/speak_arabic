@@ -12,7 +12,7 @@
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "sqlite",
-    "prodDatabaseType": "postgres",
+    "prodDatabaseType": "postgresql",
     "searchEngine": false,
     "messageBroker": false,
     "serviceDiscoveryType": false,
@@ -24,7 +24,7 @@
     "clientFramework": "react",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "creationTimestamp": 1611524217750,
+    "creationTimestamp": 1611607920783,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
@@ -41,6 +41,24 @@
         "name": "generator-jhipster-nodejs",
         "version": "1.0.2"
       }
-    ]
-  }
+    ],
+    "skipUserManagement": false,
+    "languages": ["en", "fr"],
+    "nativeLanguage": "en",
+    "skipClient": false,
+    "skipServer": false,
+    "jwtSecretKey": "ZTJiZGZkYTQ5YWZkZDk3ZmE4ZWU4MTY4NTk5ODJhODQzODA0Njc2YjE4ZjkxNjVhODhmYzUwNzQyYTQwNTg5Y2VjZjY5OWY2NDk3MDQ1ZmQ4ZGY0ZDM5YmQyZmM4OTg0Mzg2MTBmN2JmYjM5NjA2ZmMxNjE5MDllMTMxMGI4OTY=",
+    "gcpProjectId": "speak-arabic-302821",
+    "gcpCloudSqlInstanceName": "speak_arabic",
+    "gcpCloudSqlUserName": "mbouras",
+    "gcpCloudSqlDatabaseName": "speak_arabic",
+    "gaeServiceName": "default",
+    "gaeLocation": "europe-west",
+    "gaeInstanceClass": "F1",
+    "gaeScalingType": "automatic",
+    "gaeMinInstances": "0",
+    "gaeMaxInstances": "0",
+    "gaeCloudSQLInstanceNeeded": "N"
+  },
+  "entities": ["Country", "Category", "Word", "ArabicSound"]
 }

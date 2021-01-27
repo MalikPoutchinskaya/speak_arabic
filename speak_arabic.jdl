@@ -1,0 +1,64 @@
+application {
+  config {
+    applicationType monolith
+    authenticationType jwt
+    baseName speak_arabic
+    buildTool maven
+    cacheProvider no
+    clientFramework react
+    clientPackageManager npm
+    clientTheme none
+    creationTimestamp 1611524217750
+    databaseType sql
+    //devDatabaseType sqlite
+    dtoSuffix DTO
+    embeddableLaunchScript false
+    enableHibernateCache false
+    enableSwaggerCodegen false
+    enableTranslation false
+    jhiPrefix jhi
+    jhipsterVersion "6.8.0"
+    languages [en, fr]
+    messageBroker false
+    nativeLanguage en
+    packageName com.jhipster.node
+    prodDatabaseType postgresql
+    searchEngine false
+    serverPort 8081
+    serviceDiscoveryType false
+    skipClient false
+    skipServer false
+    skipUserManagement false
+    testFrameworks []
+    useSass true
+    websocket false
+  }
+  entities *
+}
+
+entity Country {
+    name String
+    flagUrl String
+}
+
+relationship OneToMany {
+	Country{word} to Word{country}
+}
+
+entity Category {
+	name String required
+}
+
+entity Word {
+	name String required
+}
+
+entity ArabicSound{
+	name String required
+  description String
+}
+
+relationship ManyToMany {
+	ArabicSound{word} to Word{arabicSound}
+  Word{category} to Category{word}
+}

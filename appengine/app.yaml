@@ -1,0 +1,21 @@
+# ========================================================================
+# App Engine Configuration.
+# Full reference is available at:
+# https://cloud.google.com/appengine/docs/standard/java11/config/appref
+# ========================================================================
+
+runtime: nodejs12
+instance_class: F1
+service: default
+handlers:
+# Serve all static files with url ending with a file extension
+- url: /(.*\..+)$
+  static_files: build/\1
+  upload: build/(.*\..+)$
+# Catch all handler to index.html
+- url: /.*
+  static_files: build/index.html
+  upload: build/index.html
+automatic_scaling:
+  min_instances: 1
+  max_instances: 0

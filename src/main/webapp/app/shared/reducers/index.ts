@@ -11,6 +11,22 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import country, {
+  CountryState
+} from 'app/entities/country/country.reducer';
+// prettier-ignore
+import category, {
+  CategoryState
+} from 'app/entities/category/category.reducer';
+// prettier-ignore
+import word, {
+  WordState
+} from 'app/entities/word/word.reducer';
+// prettier-ignore
+import arabicSound, {
+  ArabicSoundState
+} from 'app/entities/arabic-sound/arabic-sound.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +39,10 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly country: CountryState;
+  readonly category: CategoryState;
+  readonly word: WordState;
+  readonly arabicSound: ArabicSoundState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +57,10 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  country,
+  category,
+  word,
+  arabicSound,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

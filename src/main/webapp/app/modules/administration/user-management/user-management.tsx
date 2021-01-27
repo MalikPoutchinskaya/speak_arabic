@@ -24,19 +24,19 @@ export const UserManagement = (props: IUserManagementProps) => {
     setPagination({
       ...pagination,
       order: pagination.order === 'asc' ? 'desc' : 'asc',
-      sort: p,
+      sort: p
     });
 
   const handlePagination = currentPage =>
     setPagination({
       ...pagination,
-      activePage: currentPage,
+      activePage: currentPage
     });
 
   const toggleActive = user => () =>
     props.updateUser({
       ...user,
-      activated: !user.activated,
+      activated: !user.activated
     });
 
   const { users, account, match, totalItems } = props;
@@ -161,7 +161,7 @@ export const UserManagement = (props: IUserManagementProps) => {
 const mapStateToProps = (storeState: IRootState) => ({
   users: storeState.userManagement.users,
   totalItems: storeState.userManagement.totalItems,
-  account: storeState.authentication.account,
+  account: storeState.authentication.account
 });
 
 const mapDispatchToProps = { getUsers, updateUser };

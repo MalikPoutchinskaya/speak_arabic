@@ -21,7 +21,7 @@ describe('private-route component', () => {
     const renderFn: Function = renderedRoute.props().render;
     const comp = shallow(
       renderFn({
-        location: '/',
+        location: '/'
       })
     );
     expect(comp.length).toEqual(1);
@@ -39,7 +39,7 @@ describe('private-route component', () => {
     const renderFn: Function = renderedRoute.props().render;
     const comp = shallow(
       renderFn({
-        location: '/',
+        location: '/'
       })
     );
     expect(comp.length).toEqual(1);
@@ -57,7 +57,7 @@ describe('private-route component', () => {
     expect(() =>
       shallow(
         renderFn({
-          location: '/',
+          location: '/'
         })
       ).html()
     ).toThrow(Error);

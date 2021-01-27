@@ -18,7 +18,10 @@ import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 
-const baseHref = document.querySelector('base').getAttribute('href').replace(/\/$/, '');
+const baseHref = document
+  .querySelector('base')
+  .getAttribute('href')
+  .replace(/\/$/, '');
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -60,7 +63,7 @@ const mapStateToProps = ({ authentication, applicationProfile }: IRootState) => 
   isAdmin: hasAnyAuthority(authentication.account.authorities, [AUTHORITIES.ADMIN]),
   ribbonEnv: applicationProfile.ribbonEnv,
   isInProduction: applicationProfile.inProduction,
-  isSwaggerEnabled: applicationProfile.isSwaggerEnabled,
+  isSwaggerEnabled: applicationProfile.isSwaggerEnabled
 });
 
 const mapDispatchToProps = { getSession, getProfile };
